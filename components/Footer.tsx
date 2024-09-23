@@ -1,41 +1,26 @@
-import Image from "next/image";
+import { siteConfig } from "@/config/site";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import React from "react";
 
 const links = [
   {
     title: "Learn More",
-    links: [
-      "About Hilink",
-      "Press Releases",
-      "Environment",
-      "Jobs",
-      "Privacy Policy",
-      "Contact Us",
-    ],
+    links: ["About Obsidian", "Environment", "Privacy Policy", "Contact Us"],
   },
   {
     title: "Our Community",
-    links: ["Climbing xixixi", "Hiking hilink", "Hilink kinthill"],
+    links: ["Climbing Mt Kenya", "Hiking Longonot", "Hiking Ngong hills"],
   },
 ];
 
 const contact_info = {
   title: "Contact Us",
   links: [
-    { label: "Admin Officer", value: "123-456-7890" },
-    { label: "Email Officer", value: "hilink@akinthil.com" },
-  ],
-};
-
-const socials = {
-  title: "Social",
-  links: [
-    "/socials/facebook.svg",
-    "/socials/instagram.svg",
-    "/socials/twitter.svg",
-    "/socials/youtube.svg",
-    "/socials/wordpress.svg",
+    { label: "Admin Officer", value: "+254 720 417002" },
+    { label: "Email Officer", value: "obsdiantours.com" },
   ],
 };
 
@@ -43,12 +28,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="flex items-center justify-center mb-24">
-      <div className="px-6 lg:px-20 3xl:px-0 mx-auto max-w-[1440px] flex w-full flex-col gap-14">
+      <div className="px-6 lg:px-20 3xl:px-0 mx-auto max-w-5xl flex w-full flex-col gap-14">
         <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
-          <Link href="/" className="mb-10">
-            <Image src="/obsidian.png" alt="logo" width={80} height={35} />
-          </Link>
-
           <div className="flex flex-wrap gap-10 sm:justify-between md:flex-1">
             {links.map((columns, index) => (
               <FooterColumn title={columns.title} key={index}>
@@ -77,18 +58,32 @@ const Footer = () => {
                   </Link>
                 ))}
               </FooterColumn>
-            </div>
-
-            <div className="flex flex-col gap-5">
-              <FooterColumn title={socials.title}>
-                <ul className="text-[14px] font-[400] flex gap-4 text-gray-30">
-                  {socials.links.map((link, linkIndex) => (
-                    <Link href="/" key={linkIndex}>
-                      <Image src={link} alt="logo" width={24} height={24} />
-                    </Link>
-                  ))}
-                </ul>
-              </FooterColumn>
+              <div className="flex flex-row gap-6">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={siteConfig.links.twitter}
+                >
+                  <span className="sr-only">Twitter</span>
+                  <FaXTwitter size={30} />
+                </a>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={siteConfig.links.facebook}
+                >
+                  <span className="sr-only">Facebook</span>
+                  <FaFacebookF size={30} />
+                </a>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={siteConfig.links.instagram}
+                >
+                  <span className="sr-only">Instagram</span>
+                  <FaInstagram size={30} />
+                </a>
+              </div>
             </div>
           </div>
         </div>

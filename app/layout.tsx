@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { siteConfig } from "@/config/site";
+import { SiteHeader } from "@/components/site-header";
+import { cn } from "@/lib/utils";
+import { Providers } from "@/components/providers";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -35,10 +37,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${inter.variable} antialiased`}>
-        <Navbar />
-        <main className="relative overflow-hidden">{children}</main>
-        <Footer />
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          inter.variable
+        )}
+      >
+        <Providers>
+          <SiteHeader />
+          <main className="relative flex min-h-dvh flex-col bg-background">
+            {children}
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

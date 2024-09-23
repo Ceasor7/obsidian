@@ -1,46 +1,56 @@
 "use client";
-import { cn } from "@/lib/utils";
 import { EmblaOptionsType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import { buttonVariants } from "../ui/button";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 type PropType = {
-  slides: { src: string; title: string; link: string }[];
+  slides: { src: string; title: string }[];
   options?: EmblaOptionsType;
 };
 
 const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
-  const [emblaRef] = useEmblaCarousel(options, [Autoplay({ delay: 3000 })]);
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+    Autoplay({ delay: 3000 }),
+  ]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  useEffect(() => {
+    if (emblaApi) {
+      emblaApi.on("select", () => {
+        setSelectedIndex(emblaApi.selectedScrollSnap());
+      });
+    }
+  }, [emblaApi]);
 
   return (
-    <div className="max-w-5xl pt-5 mx-auto">
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex -ml-4">
+    <div className="w-full h-screen mx-auto flex items-center">
+      <div className="overflow-hidden w-full h-full" ref={emblaRef}>
+        <div className="flex h-full">
           {slides.map((slide, index) => (
-            <div className="relative flex-none w-[70%] pl-4" key={index}>
+            <div className="relative flex-none w-full h-full" key={index}>
               <Image
-                height={600}
-                width={750}
+                className="object-cover"
                 src={slide.src}
                 alt={`Slide ${index + 1}`}
+                layout="fill"
               />
-              {/* Position the text over the image */}
-              <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 p-4 rounded-md">
-                <h3 className="text-white font-semibold">{slide.title}</h3>
-                <Link
-                  href={slide.link}
-                  className={cn(
-                    buttonVariants({ variant: "link" }),
-                    "text-white py-0"
-                  )}
+
+              {selectedIndex === index && ( // Only animate the active slide
+                <motion.div
+                  className="absolute inset-0 flex flex-col items-center justify-center text-center"
+                  initial={{ opacity: 0, y: -50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  key={index}
                 >
-                  Read more →
-                </Link>
-              </div>
+                  <h3 className="text-white font-semibold text-3xl mb-4">
+                    {slide.title}
+                  </h3>
+                </motion.div>
+              )}
             </div>
           ))}
         </div>
