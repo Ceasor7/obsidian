@@ -1,6 +1,6 @@
 import About from "@/components/About";
 import LandingPage from "@/components/AutoScroll/LandingPage";
-import Features from "@/components/Features";
+import Features from "@/components/Features/Features";
 
 export default function Home() {
   return (
