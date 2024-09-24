@@ -10,7 +10,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa6";
 
 export function SiteHeader() {
   return (
-    <header className="flex justify-between mx-auto max-w-5xl py-2 items-center ">
+    <header className="flex justify-between mx-auto max-w-5xl py-4 items-center ">
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <MainNav />
         <div className="flex flex-1 items-center justify-end space-x-2">
