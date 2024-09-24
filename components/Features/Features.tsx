@@ -28,7 +28,7 @@ const FEATURES = [
       "Provide guided game drives in popular national parks and game reserves, with knowledgeable guides who offer insights into wildlife and nature.",
   },
   {
-    image: "/features/booking.jpeg",
+    image: "/features/payments.jpg",
     title: " Booking and Payment Features",
     description:
       "We Create an easy-to-use online platform where clients can book airport transfers, hotel stays, and tours directly.",
