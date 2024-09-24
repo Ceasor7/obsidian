@@ -7,7 +7,13 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 type PropType = {
-  slides: { src: string; title: string }[];
+  slides: {
+    src: string;
+    title: string;
+    description: string;
+    price: string;
+    duration: string;
+  }[];
   options?: EmblaOptionsType;
 };
 
@@ -38,7 +44,7 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
                 layout="fill"
               />
 
-              {selectedIndex === index && ( // Only animate the active slide
+              {selectedIndex === index && (
                 <motion.div
                   className="absolute inset-0 flex flex-col items-center justify-center text-center"
                   initial={{ opacity: 0, y: -50 }}
@@ -46,9 +52,20 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
                   transition={{ duration: 0.8, ease: "easeInOut" }}
                   key={index}
                 >
-                  <h3 className="text-white font-semibold text-3xl mb-4">
-                    {slide.title}
-                  </h3>
+                  <div className=" bg-black rounded-lg bg-opacity-50 p-2 mb-1">
+                    <h2 className=" text-2xl lg:text-4xl text-white font-bold">
+                      {slide.title}
+                    </h2>
+                    <p className=" text-white">{slide.description}</p>
+                  </div>
+                  <div className=" flex justify-between gap-x-5">
+                    <p className=" bg-black font-bold rounded-lg bg-opacity-50 p-2 text-[#ffde59]">
+                      Price: {slide.price}
+                    </p>
+                    <p className=" bg-black font-bold rounded-lg bg-opacity-50 p-2 text-[#ffde59]">
+                      Duration: {slide.duration}
+                    </p>
+                  </div>
                 </motion.div>
               )}
             </div>

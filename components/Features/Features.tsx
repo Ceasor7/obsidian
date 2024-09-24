@@ -10,31 +10,31 @@ const FEATURES = [
       "We Provide reliable airport pickups with options to drop tourists at their hotels. We also Offer a personalized service where a driver waits for clients with a sign at the airport.",
   },
   {
-    image: "/features/airport-pickups.webp",
+    image: "/features/booking.jpeg",
     title: "Hotel Bookings",
     description:
       "We Collaborate with a variety of hotels, from budget-friendly options to luxury stays, allowing tourists to choose their preferred accommodation.",
   },
   {
-    image: "/features/airport-pickups.webp",
+    image: "/features/package.jpeg",
     title: "Customizable Tour Packages",
     description:
       "We provide customizable tour packages that include the client's preferences for destinations, accommodations, and activities.",
   },
   {
-    image: "/features/airport-pickups.webp",
+    image: "/features/safaris.webp",
     title: "Game Drive Safaris",
     description:
       "Provide guided game drives in popular national parks and game reserves, with knowledgeable guides who offer insights into wildlife and nature.",
   },
   {
-    image: "/features/airport-pickups.webp",
+    image: "/features/booking.jpeg",
     title: " Booking and Payment Features",
     description:
       "We Create an easy-to-use online platform where clients can book airport transfers, hotel stays, and tours directly.",
   },
   {
-    image: "/features/airport-pickups.webp",
+    image: "/features/visas.jpg",
     title: "Additional Services",
     description:
       "We Provide support with obtaining tourist visas for travelers visiting the country. We also Partner with insurance companies to offer travel insurance as an add-on for clients.",
@@ -55,7 +55,7 @@ const Features = () => {
               className="absolute left-[380px] top-[-28px] w-10 lg:w-[50px]"
             />
             <h2 className="text-[40px] font-[700] leading-[120%] lg:text-[64px] ">
-              Our Features
+              Our Services
             </h2>
           </div>
           <ul className="mt-10 grid gap-10 lg:grid-cols-2 lg:mg-20 lg:gap-20">

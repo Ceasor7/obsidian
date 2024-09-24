@@ -5,17 +5,17 @@ import TestimonialsCard from "./TestimonialsCard";
 
 const testimonials = [
   {
-    name: "John Doe",
+    name: "Fiona Oyugi",
     feedback:
       "Amazing experience! The tour was well-organized, and the staff was super friendly.",
   },
   {
-    name: "Jane Smith",
+    name: "Peter k.Njuguna",
     feedback:
       "We had the best time exploring Kenya with Obsidian Tours. Highly recommended!",
   },
   {
-    name: "Alex Johnson",
+    name: "Alexandar Ishmael",
     feedback:
       "Fantastic service from start to finish. Will definitely book again!",
   },
