@@ -13,16 +13,16 @@ const page = () => {
               Get in Touch 📞
             </div>
           </div>
-          <div className=" flex gap-x-5 sm:gap-x-16 ">
-            <div className="flex flex-col gap-y-3 shadow-xl p-10 items-center mb-4 w-full">
+          <div className=" flex flex-col md:flex-row gap-x-5 sm:gap-x-16 ">
+            <div className="flex flex-col gap-y-3 text-center shadow-xl p-5 md:p-10 items-center mb-4 w-full">
               <MapPin className="w-6 h-6 text-[#004aad] mr-2" />
               <p className="w-full">P.O. Box 1234, Nairobi, Kenya</p>
             </div>
-            <div className="flex flex-col gap-y-3 shadow-xl p-10 items-center mb-4 w-full">
+            <div className="flex flex-col gap-y-3 text-center shadow-xl p-5 md:p-10 items-center mb-4 w-full">
               <Phone className="w-6 h-6 text-[#004aad] mr-2" />
               <p className="w-full">+254 720 417002</p>
             </div>
-            <div className="flex flex-col gap-y-3 shadow-xl p-10 items-center mb-4 w-full">
+            <div className="flex flex-col gap-y-3 text-center shadow-xl p-5 md:p-10 items-center mb-4 w-full">
               <Mail className="w-6 h-6 text-[#004aad] mr-2" />
               <p className="w-full">Info@obsidiantours.com</p>
             </div>
