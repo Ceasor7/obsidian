@@ -31,14 +31,11 @@ export function MobileNav() {
           <span className="font-bold">{siteConfig.name}</span>
         </MobileLink>
         <div className="flex flex-col gap-3 mt-3">
-          <MobileLink onOpenChange={setOpen} href="/blog">
-            Blog
+          <MobileLink onOpenChange={setOpen} href="/">
+            Home
           </MobileLink>
-          <MobileLink onOpenChange={setOpen} href="/about">
-            About
-          </MobileLink>
-          <MobileLink onOpenChange={setOpen} href="/project">
-            Projects
+          <MobileLink onOpenChange={setOpen} href="#services">
+            Services
           </MobileLink>
           <MobileLink onOpenChange={setOpen} href="/contact">
             Contact
@@ -47,7 +44,7 @@ export function MobileNav() {
           <div className="flex flex-row gap-6">
             <a target="_blank" rel="noreferrer" href={siteConfig.links.twitter}>
               <span className="sr-only">Twitter</span>
-              <FaXTwitter size={30} />
+              <FaXTwitter size={20} />
             </a>
             <a
               target="_blank"
@@ -55,7 +52,7 @@ export function MobileNav() {
               href={siteConfig.links.facebook}
             >
               <span className="sr-only">Facebook</span>
-              <FaFacebookF size={30} />
+              <FaFacebookF size={20} />
             </a>
             <a
               target="_blank"
@@ -63,7 +60,7 @@ export function MobileNav() {
               href={siteConfig.links.instagram}
             >
               <span className="sr-only">Instagram</span>
-              <FaInstagram size={30} />
+              <FaInstagram size={20} />
             </a>
           </div>
         </div>

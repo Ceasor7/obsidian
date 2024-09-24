@@ -52,17 +52,17 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
                   transition={{ duration: 0.8, ease: "easeInOut" }}
                   key={index}
                 >
-                  <div className=" bg-black rounded-lg bg-opacity-50 p-2 mb-1">
+                  <div className=" bg-black bg-opacity-50 mx-auto p-2 mb-1">
                     <h2 className=" text-2xl lg:text-4xl text-white font-bold">
                       {slide.title}
                     </h2>
                     <p className=" text-white">{slide.description}</p>
                   </div>
-                  <div className=" flex justify-between gap-x-5">
-                    <p className=" bg-black font-bold rounded-lg bg-opacity-50 p-2 text-[#ffde59]">
+                  <div className=" flex flex-col sm:flex-row justify-between gap-x-5">
+                    <p className=" bg-black font-bold bg-opacity-50 p-2 text-[#ffde59]">
                       Price: {slide.price}
                     </p>
-                    <p className=" bg-black font-bold rounded-lg bg-opacity-50 p-2 text-[#ffde59]">
+                    <p className=" bg-black font-bold bg-opacity-50 p-2 text-[#ffde59]">
                       Duration: {slide.duration}
                     </p>
                   </div>

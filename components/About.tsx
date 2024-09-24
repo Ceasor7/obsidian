@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section className="flex items-center justify-center flex-col">
       <div className="w-full h-screen bg-hero bg-no-repeat bg-center bg-cover bg-fixed pt-14 flex flex-col items-center justify-center text-center lg:px-20 3xl:px-0 mx-auto pb-24">
-        <div className="bg-black bg-opacity-50 p-6 rounded-lg mt-6">
+        <div className="bg-black bg-opacity-50 p-6 mt-6">
           <h2 className="text-xl flex items-center justify-center font-[700] leading-[120%] text-white lg:font-[700] lg:leading-[120%]  mt-4">
             Discover Kenya with Ease and Comfort
           </h2>
