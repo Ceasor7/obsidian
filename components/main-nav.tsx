@@ -13,7 +13,7 @@ export function MainNav() {
         <Image src="/obsidian.png" alt="logo" width={80} height={30} />
       </Link>
       <Link
-        href="/about"
+        href="#about"
         className={cn(
           "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/about" ? "text-foreground" : "text-foreground/60"
@@ -22,7 +22,7 @@ export function MainNav() {
         About
       </Link>
       <Link
-        href="/services"
+        href="#services"
         className={cn(
           "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/services" ? "text-foreground" : "text-foreground/60"

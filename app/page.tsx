@@ -7,11 +7,24 @@ import Testimonials from "@/components/Testimonials/Testimonials";
 export default function Home() {
   return (
     <div>
-      <LandingPage />
-      <CompanyMotto />
-      <About />
-      <Features />
-      <Testimonials />
+      <section id="landing-page">
+        <LandingPage />
+      </section>
+
+      <section id="about">
+        <CompanyMotto />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="services">
+        <Features />
+      </section>
+
+      <section id="#testimonials">
+        <Testimonials />
+      </section>
     </div>
   );
 }
